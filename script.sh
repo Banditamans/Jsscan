@@ -21,7 +21,23 @@ mkdir -p Jsscan_results/db
 linkf=~/tools/LinkFinder/linkfinder.py
 secf=~/tools/SecretFinder/SecretFinder.py
 
-for i in $(cat $1)
+touch subdomains_gau.txt
+
+touch temp.txt
+cat $1  >> temp.txt
+
+cat $1 | gau --providers wayback  >> subdomains_gau.txt
+
+#done
+
+cat temp.txt >> subdomains_gau.txt
+
+
+cat subdomains_gau.txt | sort -u > subdomains_gau1.txt
+
+
+
+for i in $(cat subdomains_gau1.txt)
 do
         cd Jsscan_results
         n1=$(echo $i | awk -F/ '{print $3}')
