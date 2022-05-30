@@ -26,7 +26,7 @@ if [[ ! -d ~/tools/gau ]]
 then
         
         wget https://github.com/lc/gau/releases/download/v2.1.1/gau_2.1.1_linux_amd64.tar.gz && tar xvf gau_2.1.1_linux_amd64.tar.gz
-        cp gau /usr/bin/gau
+        sudo cp gau /usr/bin/gau
 else
         printf "gau already present in tools folder!\n\n"
 fi
