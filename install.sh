@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt install wget -y
+
 cwd=$(pwd)
 
 mkdir -p ~/tools
@@ -18,9 +20,20 @@ then
 else
         printf "SecretFinder already present in tools folder...!\n\n"
 fi
+ 
+
+if [[ ! -d ~/tools/gau ]]
+then
+        
+        wget https://github.com/lc/gau/releases/download/v2.1.1/gau_2.1.1_linux_amd64.tar.gz && tar xvf gau_2.1.1_linux_amd64.tar.gz
+        cp gau /usr/bin/gau
+else
+        printf "gau already present in tools folder!\n\n"
+fi
 
 
-sudo apt install wget -y
+
+
 
 cd LinkFinder
 
