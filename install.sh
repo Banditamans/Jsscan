@@ -40,6 +40,8 @@ cd LinkFinder
 sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 pip install jsbeautifier
+sed -i 's/ssl.PROTOCOL_TLSv1_2/ssl.PROTOCOL_TLSv1_3/g' linkfinder.py
+sed -i 's/ssl.PROTOCOL_TLSv1/ssl.PROTOCOL_TLSv1_2/g' linkfinder.py
 
 cd ..
 
