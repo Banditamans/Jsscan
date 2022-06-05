@@ -41,7 +41,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 pip install jsbeautifier
 rm linkfinder.py
-wget https://raw.githubusercontent.com/Banditamans/Jsscan/main/llinkfinder.py
+wget https://raw.githubusercontent.com/Banditamans/Jsscan/main/linkfinder.py
 
 cd ..
 
